@@ -21,7 +21,7 @@ module.exports = {
         },
       },
       colors: {
-        primary: "#ffbe33",
+        primary: "#FF8001",
         secondary: "#222831",
       },
       fontFamily: {
