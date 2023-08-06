@@ -7,17 +7,17 @@ const Header = () => {
           <Logo />
         </div>
         <nav>
-          <ul className="flex">
-            <li className="px-[">
+          <ul className="flex gap-x-2">
+            <li className="px-[5px] py-[10px] uppercase hover:text-primary cursor-pointer">
               <a href="">Home</a>
             </li>
-            <li>
+            <li className="px-[5px] py-[10px] uppercase hover:text-primary cursor-pointer">
               <a href="">Menu</a>
             </li>
-            <li>
+            <li className="px-[5px] py-[10px] uppercase hover:text-primary cursor-pointer">
               <a href="">About</a>
             </li>
-            <li>
+            <li className="px-[5px] py-[10px] uppercase hover:text-primary cursor-pointer">
               <a href="">Book Table</a>
             </li>
           </ul>
