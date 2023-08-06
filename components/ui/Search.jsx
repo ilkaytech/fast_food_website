@@ -1,14 +1,15 @@
+import Image from "next/image";
 import React from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 import Title from "../ui/Title";
-import Image from "next/image";
+import { GiCancel } from "react-icons/gi";
 
 const Search = ({ setIsSearchModal }) => {
   return (
     <div
       className="fixed top-0 left-0 w-screen h-screen z-50 
     after:content-[''] after:w-screen 
-    after:h-screen after:bg-white after:absolute
+    after:h-screen after:bg-white after:absolute after:opacity-60
     after:top-0 after:left-0 grid place-content-center"
     >
       <OutsideClickHandler onOutsideClick={() => setIsSearchModal(false)}>
@@ -65,6 +66,15 @@ const Search = ({ setIsSearchModal }) => {
                 <span className="font-bold">$16.49</span>
               </li>
             </ul>
+            <button
+              className="absolute top-4 right-4"
+              onClick={() => setIsSearchModal(false)}
+            >
+              <GiCancel
+                size={20}
+                className="hover:text-primary transition-all"
+              />
+            </button>
           </div>
         </div>
       </OutsideClickHandler>
