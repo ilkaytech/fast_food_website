@@ -4,6 +4,7 @@ import Logo from "../ui/Logo";
 import Search from "../ui/Search";
 import { FaHamburger } from "react-icons/fa";
 import { GiCancel } from "react-icons/gi";
+import Carousel from "../Carousel";
 
 const Header = () => {
   const [isSearchModal, setIsSearchModal] = useState(false);
