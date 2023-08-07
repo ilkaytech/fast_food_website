@@ -50,12 +50,17 @@ const Header = () => {
           <button className="sm:hidden inline-block onClick{() => setIsMenuModal (true)} ">
             <FaHamburger className="text-xl hover:text-primary" />
           </button>
-          <button
-            className="absolute top-4 right-4"
-            onClick={() => setIsSearchModal(false)}
-          >
-            <GiCancel size={20} className="hover:text-primary transition-all" />
-          </button>
+          {isMenuModal && (
+            <button
+              className="absolute top-4 right-4 z-50"
+              onClick={() => setIsSearchModal(false)}
+            >
+              <GiCancel
+                size={20}
+                className="hover:text-primary transition-all"
+              />
+            </button>
+          )}
         </div>
       </div>
       {isSearchModal && <Search setIsSearchModal={setIsSearchModal} />}
