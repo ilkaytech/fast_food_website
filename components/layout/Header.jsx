@@ -3,6 +3,7 @@ import { FaUserAlt, FaShoppingCart, FaSearch } from "react-icons/fa";
 import Logo from "../ui/Logo";
 import Search from "../ui/Search";
 import { FaHamburger } from "react-icons/fa";
+import { GiCancel } from "react-icons/gi";
 
 const Header = () => {
   const [isSearchModal, setIsSearchModal] = useState(false);
@@ -42,11 +43,18 @@ const Header = () => {
           <button onClick={() => setIsSearchModal(true)}>
             <FaSearch className="hover:text-primary transition-all" />
           </button>
+
           <a href="#" className="md:inline-block hidden sm">
             <button className="btn-primary">Order Online</button>
           </a>
           <button className="sm:hidden inline-block onClick{() => setIsMenuModal (true)} ">
             <FaHamburger className="text-xl hover:text-primary" />
+          </button>
+          <button
+            className="absolute top-4 right-4"
+            onClick={() => setIsSearchModal(false)}
+          >
+            <GiCancel size={20} className="hover:text-primary transition-all" />
           </button>
         </div>
       </div>
