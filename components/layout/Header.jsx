@@ -32,6 +32,17 @@ const Header = () => {
               <a href="">Book Table</a>
             </li>
           </ul>
+          {isMenuModal && (
+            <button
+              className="absolute top-4 right-4 z-50"
+              onClick={() => setIsMenuModal(false)}
+            >
+              <GiCancel
+                size={20}
+                className="hover:text-primary transition-all"
+              />
+            </button>
+          )}
         </nav>
         <div className="flex gap-x-4 items-center">
           <a href="#">
@@ -50,17 +61,6 @@ const Header = () => {
           <button className="sm:hidden inline-block onClick{() => setIsMenuModal (true)} ">
             <FaHamburger className="text-xl hover:text-primary" />
           </button>
-          {isMenuModal && (
-            <button
-              className="absolute top-4 right-4 z-50"
-              onClick={() => setIsSearchModal(false)}
-            >
-              <GiCancel
-                size={20}
-                className="hover:text-primary transition-all"
-              />
-            </button>
-          )}
         </div>
       </div>
       {isSearchModal && <Search setIsSearchModal={setIsSearchModal} />}
