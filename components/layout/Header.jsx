@@ -12,8 +12,10 @@ const Header = () => {
       <div className="container mx-auto text-white flex justify-between items-center h-full">
         <Logo />
         <nav
-          className="sm:static absolute top-0 left-0 grid 
-        place-content-center sm:w-auto sm:h-auto w-full h-full sm:text-white text-black "
+          className={`sm:static absolute top-0 left-0 grid 
+        place-content-center sm:w-auto sm:h-auto w-full h-full sm:text-white text-black 
+        sm:bg-transparent bg-white
+        ${isMenuModal !== true && "hidden"}`}
         >
           <ul className="flex gap-x-2 sm:flex-row flex-col items-center ">
             <li className="px-[5px] py-[10px] uppercase hover:text-primary cursor-pointer">
@@ -43,7 +45,7 @@ const Header = () => {
           <a href="#" className="md:inline-block hidden sm">
             <button className="btn-primary">Order Online</button>
           </a>
-          <button className="sm:hidden inline-block ">
+          <button className="sm:hidden inline-block onClick{() => setIsMenuModal (true)} ">
             <FaHamburger className="text-xl hover:text-primary" />
           </button>
         </div>
