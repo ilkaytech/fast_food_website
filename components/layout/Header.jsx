@@ -4,17 +4,25 @@ import Logo from "../ui/Logo";
 import Search from "../ui/Search";
 import { FaHamburger } from "react-icons/fa";
 import { GiCancel } from "react-icons/gi";
-import Carousel from "../Carousel";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [isSearchModal, setIsSearchModal] = useState(false);
   const [isMenuModal, setIsMenuModal] = useState(false);
+
+  const router = useRouter();
+  console.log(router.asPath);
+
   return (
-    <div className="h-[5.5rem] bg-secondary ">
+    <div
+      className={`h-[5.5rem] z-50 relative ${
+        router.asPath === "/" ? "bg-transparent" : "bg-secondary"
+      }`}
+    >
       <div className="container mx-auto text-white flex justify-between items-center h-full">
         <Logo />
         <nav
-          className={`sm:static absolute top-0 left-0 sm:w-auto sm:h-auto w-full h-full
+          className={`sm:static absolute top-0 left-0 sm:w-auto sm:h-auto w-full h-full h-screen
            sm:text-white text-black sm:bg-transparent bg-white sm:flex hidden
         ${isMenuModal === true && "!grid place-content-center"}`}
         >
