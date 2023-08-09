@@ -11,7 +11,7 @@ const Carousel = () => {
     slidesToScroll: 1,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 30000,
+    autoplaySpeed: 3000,
     appenDots: (dots) => (
       <div>
         <ul className="container mx-auto w-full text-start">{dots} </ul>
