@@ -30,6 +30,3 @@ body {
 .slick-dots div {
   @apply !m-0 !mt-8;
 }
-.slick-dots .ul .button {
-  @apply !text-white !font-bold;
-}

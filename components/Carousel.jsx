@@ -18,8 +18,8 @@ const Carousel = () => {
       </div>
     ),
 
-    customPaping: (i) => (
-      <div className="w-3 h-3 border bg-white rounded-full mt-10 "></div>
+    customPaging: (i) => (
+      <div className="w-3 h-3 bg-slate-100 rounded-full mt-10 "></div>
     ),
   };
 
