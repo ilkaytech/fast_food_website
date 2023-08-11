@@ -4,11 +4,16 @@ import Title from "../../components/ui/Title";
 
 const Index = () => {
   return (
-    <div className="flex items-center h-screen gap-20 py-20 ">
-      <div className="relative flex-1 w-[60%] h-[60%] mx-20">
-        <Image src="/images/food.png" alt="" layout="fill" />
+    <div className="flex items-center h-screen gap-20 py-20 flex-wrap">
+      <div className="relative md:flex-1 w-[60%] h-[60%] mx-20">
+        <Image
+          src="/images/food.png"
+          alt=""
+          layout="fill"
+          objectFit="contain"
+        />
       </div>
-      <div className="flex-1">
+      <div className="md:flex-1 md:text-start text-center">
         <Title addClass="text-6xl ">Good Pizza</Title>
         <span
           className="text-primary text-2xl
@@ -16,14 +21,14 @@ const Index = () => {
         >
           $10
         </span>
-        <p className="text-sm my-4">
+        <p className="text-sm my-4 md:pr-24">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
           quibusdam numquam sed minima earum corporis nisi neque vitae
           blanditiis perspiciatis?
         </p>
         <div>
           <h4 className="text-xl font-bold">Choose the size</h4>
-          <div className="flex items-center gap-x-20">
+          <div className="flex items-center gap-x-20 md:justify-start justify-center">
             <div className="relative w-8 h-8">
               <Image src="/images/size.png" alt="" layout="fill" />
               <span
@@ -53,7 +58,7 @@ const Index = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-x-4 mt-4">
+        <div className="flex gap-x-4 my-6 md:justify-start justify-center">
           <label className="flex items-center gap-x-1">
             <input type="checkbox" className="w-5 h-5 accent-primary" />
             <span className="text-sm font-semibold">ketchup</span>
@@ -63,6 +68,7 @@ const Index = () => {
             <span className="text-sm font-semibold">ketchup</span>
           </label>
         </div>
+        <button className="btn-primary mt-4">Add to Cart</button>
       </div>
     </div>
   );
