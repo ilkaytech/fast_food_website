@@ -6,6 +6,9 @@ const Reservation = () => {
   const inputs = [
     {
       id: 1,
+      name: "fullName",
+      type: "text",
+      palceholder: "Your Full Name",
     },
   ];
 
