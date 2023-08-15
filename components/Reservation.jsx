@@ -16,6 +16,12 @@ const Reservation = () => {
       type: "number",
       palceholder: "Your Phone Number",
     },
+    {
+      id: 3,
+      name: "email",
+      type: "email",
+      palceholder: "Your Email Address",
+    },
   ];
 
   return (
