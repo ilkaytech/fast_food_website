@@ -10,6 +10,12 @@ const Reservation = () => {
       type: "text",
       palceholder: "Your Full Name",
     },
+    {
+      id: 2,
+      name: "phoneNumber",
+      type: "number",
+      palceholder: "Your Phone Number",
+    },
   ];
 
   return (
