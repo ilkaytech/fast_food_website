@@ -3,10 +3,16 @@ import Title from "./ui/Title";
 import Input from "./form/Input";
 
 const Reservation = () => {
+  const inputs = [
+    {
+      id: 1,
+    },
+  ];
+
   return (
     <div className="container mx-auto py-12 ">
       <Title addClass="text-[40px] mb-10">Book A Table</Title>
-      <div className="flex justify-between flex-wrap gap-x-10">
+      <div className="flex justify-between flex-wrap-reverse gap-x-10">
         <div className="lg:flex-1 w-full">
           <div className="flex flex-col gap-y-3">
             <Input />
