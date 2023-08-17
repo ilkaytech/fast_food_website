@@ -1,6 +1,7 @@
 import React from "react";
 
-const Input = () => {
+const Input = (props) => {
+  console.log(props);
   return (
     <div className="w-full">
       <label className="relative block cursor-text w-full">
