@@ -22,6 +22,12 @@ const Reservation = () => {
       type: "email",
       palceholder: "Your Email Address",
     },
+    {
+      id: 4,
+      name: "persons",
+      type: "number",
+      palceholder: "How Many Persons?",
+    },
   ];
 
   return (
