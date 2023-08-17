@@ -1,7 +1,7 @@
 import React from "react";
 
 const Input = (props) => {
-  console.log(props);
+  const { placeholder, ...inputProps } = props;
   return (
     <div className="w-full">
       <label className="relative block cursor-text w-full">
@@ -10,6 +10,7 @@ const Input = (props) => {
           className="h-12 w-full border border-primary outline-none
           px-4 peer pt-2 "
           required
+          {...inputProps}
         />
         <span
           className="absolute top-0 left-0 px-4
@@ -17,7 +18,7 @@ const Input = (props) => {
         peer-focus:text-xs peer-valid:h-7 peer-valid:text-xs
         transition-all "
         >
-          Email
+          {placeholder}{" "}
         </span>
       </label>
     </div>
