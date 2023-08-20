@@ -8,25 +8,31 @@ const Reservation = () => {
       id: 1,
       name: "fullName",
       type: "text",
-      palceholder: "Your Full Name",
+      placeholder: "Your Full Name",
     },
     {
       id: 2,
       name: "phoneNumber",
       type: "number",
-      palceholder: "Your Phone Number",
+      placeholder: "Your Phone Number",
     },
     {
       id: 3,
       name: "email",
       type: "email",
-      palceholder: "Your Email Address",
+      placeholder: "Your Email Address",
     },
     {
       id: 4,
       name: "persons",
       type: "number",
-      palceholder: "How Many Persons?",
+      placeholder: "How Many Persons?",
+    },
+    {
+      id: 5,
+      name: "persons",
+      type: "datetime-local",
+      placeholder: "How Many Persons?",
     },
   ];
 
