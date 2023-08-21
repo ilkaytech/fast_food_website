@@ -4,7 +4,12 @@ import Input from "./form/Input";
 import { useFormik } from "formik";
 
 const Reservation = () => {
-  const formik = useFormik({
+  const onSubmit = async (values, actions) => {
+    await new Promise((revolse) => setTimeout(revolse, 4000));
+    actions.resetForm();
+  };
+
+  const { values, handleSubmit, handleChange } = useFormik({
     initialValues: {
       fullName: "",
       phoneNumber: "",
@@ -12,9 +17,7 @@ const Reservation = () => {
       persons: "",
       date: "",
     },
-    onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
-    },
+    onSubmit,
   });
 
   const inputs = [
@@ -23,34 +26,34 @@ const Reservation = () => {
       name: "fullName",
       type: "text",
       placeholder: "Your Full Name",
-      value: formik.values.fullName,
+      value: values.fullName,
     },
     {
       id: 2,
       name: "phoneNumber",
       type: "number",
       placeholder: "Your Phone Number",
-      value: formik.values.phoneNumber,
+      value: values.phoneNumber,
     },
     {
       id: 3,
       name: "email",
       type: "email",
       placeholder: "Your Email Address",
-      value: formik.values.email,
+      value: values.email,
     },
     {
       id: 4,
       name: "persons",
       type: "number",
       placeholder: "How Many Persons?",
-      value: formik.values.persons,
+      value: values.persons,
     },
     {
       id: 5,
       name: "date",
       type: "datetime-local",
-      value: formik.values.date,
+      value: values.date,
     },
   ];
 
@@ -58,13 +61,13 @@ const Reservation = () => {
     <div className="container mx-auto py-12 ">
       <Title addClass="text-[40px] mb-10">Book A Table</Title>
       <div className="flex justify-between flex-wrap-reverse gap-10">
-        <form className="lg:flex-1 w-full" onSubmit={formik.handleSubmit}>
+        <form className="lg:flex-1 w-full" onSubmit={handleSubmit}>
           <div className="flex flex-col gap-y-3">
             {inputs.map((input) => (
-              <Input key={input.id} {...input} onChange={formik.handleChange} />
+              <Input key={input.id} {...input} onChange={handleChange} />
             ))}
           </div>
-          <button className="btn-primary mt-4">Book Now</button>
+          <button className="btn-primary mt-4 type=submit">Book Now</button>
         </form>
         <div className="lg:flex-1 w-full">
           <iframe
