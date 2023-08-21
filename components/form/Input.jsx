@@ -2,6 +2,7 @@ import React from "react";
 
 const Input = (props) => {
   const { type, placeholder, ...inputProps } = props;
+  console.log(props);
   return (
     <div className="w-full">
       <label className="relative block cursor-text w-full">
