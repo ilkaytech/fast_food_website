@@ -10,4 +10,5 @@ export const reservationSchema = Yup.object({
   ),
   email: Yup.string().required("Email is invalid.").email("Email is invalid"),
   persons: Yup.string().required("Persons is invalid."),
+  date: Yup.string().required("Date is invalid."),
 });
