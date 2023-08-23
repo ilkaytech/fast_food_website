@@ -8,5 +8,6 @@ export const reservationSchema = Yup.object({
     10,
     "Phone number must be at least 10 chracters"
   ),
-  email: Yup.string().email("Email is invalid"),
+  email: Yup.string().required("Email is invalid.").email("Email is invalid"),
+  persons: Yup.string().required("Persons is invalid."),
 });
