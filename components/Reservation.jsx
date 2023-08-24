@@ -39,6 +39,7 @@ const Reservation = () => {
       type: "number",
       placeholder: "Your Phone Number",
       value: values.phoneNumber,
+      errorMessage: errors.phoneNumber,
       touched: touched.phoneNumber,
     },
     {
@@ -47,6 +48,7 @@ const Reservation = () => {
       type: "email",
       placeholder: "Your Email Address",
       value: values.email,
+      errorMessage: errors.email,
       touched: touched.email,
     },
     {
@@ -55,6 +57,7 @@ const Reservation = () => {
       type: "number",
       placeholder: "How Many Persons?",
       value: values.persons,
+      errorMessage: errors.persons,
       touched: touched.persons,
     },
     {
@@ -62,6 +65,7 @@ const Reservation = () => {
       name: "date",
       type: "datetime-local",
       value: values.date,
+      errorMessage: errors.date,
       touched: touched.date,
     },
   ];
