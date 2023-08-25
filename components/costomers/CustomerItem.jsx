@@ -3,7 +3,7 @@ import React from "react";
 
 const CustomerItem = () => {
   return (
-    <div>
+    <div className="mt-5">
       <div className="p-6 bg-secondary text-white rounded-[5px] ">
         <p>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. At nulla
@@ -16,7 +16,15 @@ const CustomerItem = () => {
         </div>
       </div>
 
-      <div>{/* <Image /> */}</div>
+      <div className="relative w-28 h-28 ">
+        <Image
+          src="/images/client1.jpg"
+          alt=""
+          layout="fill"
+          objectFit="contain"
+          className="rounded-full"
+        />
+      </div>
     </div>
   );
 };
