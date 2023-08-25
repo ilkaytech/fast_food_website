@@ -19,6 +19,7 @@ export default function Index() {
       </Head>
       <Header />
       <Home />
+      <Footer />
     </div>
   );
 }
