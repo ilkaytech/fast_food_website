@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const CustomerItem = () => {
+const CustomerItem = ({ imgSrc }) => {
   return (
     <div className="mt-5">
       <div className="p-6 bg-secondary text-white rounded-[5px] ">
@@ -16,9 +16,12 @@ const CustomerItem = () => {
         </div>
       </div>
 
-      <div className="relative w-28 h-28 ">
+      <div
+        className="relative w-28 h-28 border-4 border-primary rounded-full mt-8 before:content-[''] before:absolute before:top-0 
+        flex justify-center before:-translate-y-3 before:rotate-45 before:bg-primary before:w-5 before:h-5  "
+      >
         <Image
-          src="/images/client1.jpg"
+          src={imgSrc}
           alt=""
           layout="fill"
           objectFit="contain"
