@@ -13,17 +13,26 @@ const Footer = () => {
             <Title addClass="text-[30px]">Contact Us</Title>
             <div className="flex flex-col gap-y-2 mt-3">
               <a href="https://goo.gl/maps/MGyQwxJ7Lq231SpG9">
-                <i className="fa-solid fa-location-dot duration-300 transform  hover:text-primary hover:scale-110"></i>
+                <i
+                  className="fa-solid fa-location-dot duration-300 transform 
+                 hover:text-primary hover:scale-110"
+                ></i>
                 <span className="inline-block ml-2">Location</span>
               </a>
-              <div>
-                <i className="fa fa-phone"></i>
+              <a href="tel:+15302648214">
+                <i
+                  className="fa fa-phone duration-300 transform
+                 hover:text-primary hover:scale-110"
+                ></i>
                 <span className="inline-block ml-2">Call +1 530 264 82 14</span>
-              </div>
-              <div>
-                <i className="fa fa-envelope"></i>
+              </a>
+              <a href="mailto:info@ilkaytech.com">
+                <i
+                  className="fa fa-envelope duration-300 transform
+                 hover:text-primary hover:scale-110"
+                ></i>
                 <span className="inline-block ml-2">info@ilkaytech.com</span>
-              </div>
+              </a>
             </div>
           </div>
           <div className="md:flex-1">
