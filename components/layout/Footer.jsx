@@ -5,10 +5,13 @@ const Footer = () => {
   return (
     <div className="bg-secondary text-white">
       <div className="container mx-auto pt-16 pb-6">
-        <div className="flex justify-between text-center ">
-          <div>
+        <div
+          className="flex md:justify-between justify-center text-center flex-wrap 
+        md:gapy-0 gap-y-6"
+        >
+          <div className="md:flex-1">
             <Title addClass="text-[30px]">Contact Us</Title>
-            <div className="flex flex-col gap-y-2 mt-6">
+            <div className="flex flex-col gap-y-2 mt-3">
               <div>
                 <i className="fa-solid fa-location-dot"></i>
                 <span className="inline-block ml-2">Location</span>
@@ -23,37 +26,48 @@ const Footer = () => {
               </div>
             </div>
           </div>
-          <div>
-            <Title addClass="text-[30px]">Feane</Title>
-            <div className="flex flex-col gap-y-2 mt-6">
-              <div>
-                <i className="fa-solid fa-location-dot"></i>
-                <span className="inline-block ml-2">Location</span>
-              </div>
-              <div>
-                <i className="fa fa-phone"></i>
-                <span className="inline-block ml-2">Call +1 530 264 82 14</span>
-              </div>
-              <div>
-                <i className="fa fa-envelope"></i>
-                <span className="inline-block ml-2">info@ilkaytech.com</span>
-              </div>
+          <div className="md:flex-1">
+            <Title addClass="text-[38px]">Feane</Title>
+            <p className="mt-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint odio
+              debitis doloribus mollitia, saepe nobis iure atque corporis
+              aliquid consequatur?
+            </p>
+            <div className="flex items-center justify-center mt-5 gap-x-2 ">
+              <a
+                href=""
+                className="w-8 h-8 grid place-content-center bg-white text-secondary rounded-full "
+              >
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a
+                href=""
+                className="w-8 h-8 grid place-content-center bg-white text-secondary rounded-full "
+              >
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a
+                href=""
+                className="w-8 h-8 grid place-content-center bg-white text-secondary rounded-full "
+              >
+                <i className="fab fa-linkedin"></i>
+              </a>
+              <a
+                href=""
+                className="w-8 h-8 grid place-content-center bg-white text-secondary rounded-full "
+              >
+                <i className="fab fa-youtube"></i>
+              </a>
             </div>
           </div>
-          <div>
+          <div className="md:flex-1">
             <Title addClass="text-[30px]">Opening Hours</Title>
-            <div className="flex flex-col gap-y-2 mt-6">
+            <div className="flex flex-col gap-y-2 mt-3">
               <div>
-                <i className="fa-solid fa-location-dot"></i>
-                <span className="inline-block ml-2">Location</span>
+                <span className="inline-block ml-2">Everyday</span>
               </div>
               <div>
-                <i className="fa fa-phone"></i>
-                <span className="inline-block ml-2">Call +1 530 264 82 14</span>
-              </div>
-              <div>
-                <i className="fa fa-envelope"></i>
-                <span className="inline-block ml-2">info@ilkaytech.com</span>
+                <span className="inline-block ml-2">09.00 Am - 10.00 Pm</span>
               </div>
             </div>
           </div>
