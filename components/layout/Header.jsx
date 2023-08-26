@@ -26,7 +26,7 @@ const Header = () => {
         ${isMenuModal === true && "!grid place-content-center"}`}
         >
           <ul className="flex gap-x-2 sm:flex-row flex-col items-center ">
-            <li className="px-[5px] py-[10px] uppercase hover:text-primary cursor-pointer">
+            <li className="px-[5px] py-[10px] uppercase hover:text-primary cursor-pointer ">
               <a href="">Home</a>
             </li>
             <li className="px-[5px] py-[10px] uppercase hover:text-primary cursor-pointer">
@@ -53,13 +53,13 @@ const Header = () => {
         </nav>
         <div className="flex gap-x-4 items-center">
           <a href="#">
-            <FaUserAlt className="hover:text-primary transition-all" />
+            <FaUserAlt className="hover:text-primary transition-all duration-300 hover:scale-110" />
           </a>
           <a href="#">
-            <FaShoppingCart className="hover:text-primary transition-all" />
+            <FaShoppingCart className="hover:text-primary transition-all duration-300 hover:scale-110" />
           </a>
           <button onClick={() => setIsSearchModal(true)}>
-            <FaSearch className="hover:text-primary transition-all" />
+            <FaSearch className="hover:text-primary transition-all duration-300 hover:scale-110" />
           </button>
 
           <a href="#" className="md:inline-block hidden sm">

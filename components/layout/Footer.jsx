@@ -12,10 +12,10 @@ const Footer = () => {
           <div className="md:flex-1">
             <Title addClass="text-[30px]">Contact Us</Title>
             <div className="flex flex-col gap-y-2 mt-3">
-              <div>
-                <i className="fa-solid fa-location-dot"></i>
+              <a href="https://goo.gl/maps/MGyQwxJ7Lq231SpG9">
+                <i className="fa-solid fa-location-dot duration-300 transform  hover:text-primary hover:scale-110"></i>
                 <span className="inline-block ml-2">Location</span>
-              </div>
+              </a>
               <div>
                 <i className="fa fa-phone"></i>
                 <span className="inline-block ml-2">Call +1 530 264 82 14</span>
@@ -35,26 +35,37 @@ const Footer = () => {
             </p>
             <div className="flex items-center justify-center mt-5 gap-x-2 ">
               <a
-                href=""
-                className="w-8 h-8 grid place-content-center bg-white text-secondary rounded-full "
+                href="https://www.instagram.com/ilkaytech"
+                className="w-8 h-8 grid place-content-center bg-white text-secondary
+                rounded-full duration-300 transform  hover:text-primary hover:scale-110 "
               >
                 <i className="fab fa-instagram"></i>
               </a>
               <a
-                href=""
-                className="w-8 h-8 grid place-content-center bg-white text-secondary rounded-full "
+                href="https://twitter.com/ilkaytech"
+                className="w-8 h-8 grid place-content-center bg-white text-secondary 
+                rounded-full duration-300 transform  hover:text-primary hover:scale-110"
               >
                 <i className="fab fa-twitter"></i>
               </a>
               <a
-                href=""
-                className="w-8 h-8 grid place-content-center bg-white text-secondary rounded-full "
+                href="https://www.linkedin.com/in/ilkaytech"
+                className="w-8 h-8 grid place-content-center bg-white text-secondary
+                rounded-full duration-300 transform  hover:text-primary hover:scale-110"
               >
                 <i className="fab fa-linkedin"></i>
               </a>
               <a
-                href=""
-                className="w-8 h-8 grid place-content-center bg-white text-secondary rounded-full "
+                href="https://github.com/ilkaytech"
+                className="w-8 h-8 grid place-content-center bg-white text-secondary
+                rounded-full duration-300 transform  hover:text-primary hover:scale-110"
+              >
+                <i className="fab fa-github"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@ilkaytech/about"
+                className="w-8 h-8 grid place-content-center bg-white text-secondary
+                rounded-full duration-300 transform  hover:text-primary hover:scale-110"
               >
                 <i className="fab fa-youtube"></i>
               </a>
