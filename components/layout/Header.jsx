@@ -22,7 +22,7 @@ const Header = () => {
       <div className="container mx-auto text-white flex justify-between items-center h-full">
         <Logo />
         <nav
-          className={`sm:static absolute top-0 left-0 sm:w-auto sm:h-auto w-full h-full h-screen
+          className={`sm:static absolute top-0 left-0 sm:w-auto sm:h-auto w-full h-screen
            sm:text-white text-black sm:bg-transparent bg-white sm:flex hidden
         ${isMenuModal === true && "!grid place-content-center"}`}
         >
@@ -54,16 +54,20 @@ const Header = () => {
         </nav>
         <div className="flex gap-x-4 items-center">
           <Link href="/auth/login">
-            <FaUserAlt
-              className="hover:text-primary transition-all duration-300
+            <span>
+              <FaUserAlt
+                className="hover:text-primary transition-all duration-300
             hover:scale-110 cursor-pointer "
-            />
+              />
+            </span>
           </Link>
           <Link href="/cart">
-            <FaShoppingCart
-              className="hover:text-primary transition-all duration-300
+            <span>
+              <FaShoppingCart
+                className="hover:text-primary transition-all duration-300
             hover:scale-110 cursor-pointer"
-            />
+              />
+            </span>
           </Link>
           <button onClick={() => setIsSearchModal(true)}>
             <FaSearch
