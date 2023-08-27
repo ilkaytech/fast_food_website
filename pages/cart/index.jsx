@@ -33,15 +33,15 @@ const Cart = () => {
         </div>
         <div
           className="bg-secondary min-h-[calc(100vh_-_433px)] flex 
-        justify-center  flex-col text-white p-8"
+        justify-center  flex-col text-white p-12"
         >
-          <Title>Cart Total</Title>
-          <div>
-            <span>Subtotal: $16.99</span>
-            <span>Discount: $0.00</span>
-            <span>Total: $16.99</span>
+          <Title addClass="text-[40px]">Cart Total</Title>
+          <div className="mt-6">
+            <b>Subtotal: </b>$16.99 <br />
+            <b className="inline-block my-1">Discount: </b>$0.00 <br />
+            <b>Total: </b>$16.99
           </div>
-          <button className="btn-primary">CHECKOUT NOW!</button>
+          <button className="btn-primary mt-4">CHECKOUT NOW!</button>
         </div>
       </div>
     </div>
