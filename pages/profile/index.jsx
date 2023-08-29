@@ -3,26 +3,36 @@ import React from "react";
 
 const Profile = () => {
   return (
-    <div className="flex">
-      <div className="border p-10">
-        <div className="relative">
-          <Image src="/images/client2.jpg" alt="" width={60} height={60} />
-          <b>John Doe</b>
+    <div className="flex px-10">
+      <div className="border w-77">
+        <div className="relative flex flex-col items-center p-10">
+          <Image
+            src="/images/client2.jpg"
+            alt=""
+            width={100}
+            height={100}
+            className="rounded-full"
+          />
+          <b className="text-2xl mt-1">John Doe</b>
         </div>
-        <div>
-          <div>
-            <button>Account</button>
-          </div>
-          <div>
+        <ul className="">
+          <li
+            className="border w-full p-2 cursor-pointer hover:bg-primary
+          hover:text-white transition-all  "
+          >
+            <i className="fa fa-home"></i>
+            <button className="ml-1">Account</button>
+          </li>
+          <li>
             <button>Password</button>
-          </div>
-          <div>
+          </li>
+          <li>
             <button>Orders</button>
-          </div>
-          <div>
+          </li>
+          <li>
             <button>Çıkış</button>
-          </div>
-        </div>
+          </li>
+        </ul>
       </div>
       <div></div>
     </div>
