@@ -3,7 +3,7 @@ import React from "react";
 import Title from "../../components/ui/Title";
 import Input from "../../components/form/Input";
 import { useFormik } from "formik";
-import { reservationSchema } from "../../schema/reservation";
+import { profileSchema } from "../../schema/profile";
 
 const Profile = () => {
   const onSubmit = async (values, actions) => {
@@ -17,11 +17,12 @@ const Profile = () => {
         fullName: "",
         phoneNumber: "",
         email: "",
-        persons: "",
-        date: "",
+        address: "",
+        job: "",
+        bio: "",
       },
       onSubmit,
-      validationSchema: reservationSchema,
+      validationSchema: profileSchema,
     });
 
   const inputs = [
@@ -54,34 +55,36 @@ const Profile = () => {
     },
     {
       id: 4,
-      name: "persons",
-      type: "number",
-      placeholder: "How Many Persons?",
-      value: values.persons,
-      errorMessage: errors.persons,
-      touched: touched.persons,
+      name: "address",
+      type: "text",
+      placeholder: "Your Address",
+      value: values.address,
+      errorMessage: errors.address,
+      touched: touched.address,
     },
     {
       id: 5,
-      name: "date",
-      type: "datetime-local",
-      value: values.date,
-      errorMessage: errors.date,
-      touched: touched.date,
+      name: "job",
+      type: "text",
+      placeholder: "Your Job",
+      value: values.job,
+      errorMessage: errors.job,
+      touched: touched.job,
     },
     {
       id: 6,
-      name: "date",
-      type: "datetime-local",
-      value: values.date,
-      errorMessage: errors.date,
-      touched: touched.date,
+      name: "bio",
+      type: "text",
+      placeholder: "Your Bio",
+      value: values.bio,
+      errorMessage: errors.bio,
+      touched: touched.bio,
     },
   ];
 
   return (
     <div className="flex px-10 min-h-[calc(100vh_-_433px)]">
-      <div className="w-80">
+      <div className="w-80 flex-shrink-0">
         <div
           className="relative flex flex-col items-center px-10 py-5
         border border-b-0"
@@ -126,14 +129,20 @@ const Profile = () => {
           </li>
         </ul>
       </div>
-      <div className="p-8">
+      <form className="p-8 flex-1">
         <Title addClass="text-[40px]">Account Settings</Title>
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-2 gap-4 mt-4">
           {inputs.map((input) => (
-            <Input key="input.id" />
+            <Input
+              key="input.id"
+              {...input}
+              onBlur={handleBlur}
+              onChange={handleChange}
+            />
           ))}
         </div>
-      </div>
+        <button className="btn-primary mt-4">Update</button>
+      </form>
     </div>
   );
 };
