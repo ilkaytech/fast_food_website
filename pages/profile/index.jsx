@@ -83,8 +83,11 @@ const Profile = () => {
   ];
 
   return (
-    <div className="flex px-10 min-h-[calc(100vh_-_433px)]">
-      <div className="w-80 flex-shrink-0">
+    <div
+      className="flex px-10 min-h-[calc(100vh_-_433px)]
+    lg:flex-row flex-col"
+    >
+      <div className="lg:w-80 w-100 flex-shrink-0">
         <div
           className="relative flex flex-col items-center px-10 py-5
         border border-b-0"
@@ -131,7 +134,7 @@ const Profile = () => {
       </div>
       <form className="p-8 flex-1">
         <Title addClass="text-[40px]">Account Settings</Title>
-        <div className="grid grid-cols-2 gap-4 mt-4">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 mt-4">
           {inputs.map((input) => (
             <Input
               key="input.id"
