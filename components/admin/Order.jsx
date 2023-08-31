@@ -9,16 +9,19 @@ const Order = () => {
           <thead className="text-xs text-gray-400 uppercase bg-gray-700">
             <tr>
               <th scope="col" className="py-3 px-6">
-                IMAGE
+                PRODUCT ID
               </th>
               <th scope="col" className="py-3 px-6">
-                ID
+                CUSTOMER
               </th>
               <th scope="col" className="py-3 px-6">
-                TITLE
+                TOTAL
               </th>
               <th scope="col" className="py-3 px-6">
-                PRICE
+                PAYMENT
+              </th>
+              <th scope="col" className="py-3 px-6">
+                STATUS
               </th>
               <th scope="col" className="py-3 px-6">
                 ACTION
@@ -32,11 +35,7 @@ const Order = () => {
             >
               <td
                 className="py-4 px-6 font-medium whitespace-nowrap
-           hover:text-white flex items-center gap-x-1 justify-center"
-              ></td>
-              <td
-                className="py-4 px-6 font-medium whitespace-nowrap
-           hover:text-white"
+           hover:text-white gap-x-1"
               >
                 63049e92
               </td>
@@ -44,7 +43,7 @@ const Order = () => {
                 className="py-4 px-6 font-medium whitespace-nowrap
            hover:text-white"
               >
-                Delicious Pizza
+                İlkay Öztürk
               </td>
               <td
                 className="py-4 px-6 font-medium whitespace-nowrap
@@ -52,8 +51,20 @@ const Order = () => {
               >
                 $16.99
               </td>
+              <td
+                className="py-4 px-6 font-medium whitespace-nowrap
+           hover:text-white"
+              >
+                Cash
+              </td>
+              <td
+                className="py-4 px-6 font-medium whitespace-nowrap
+           hover:text-white"
+              >
+                preparing
+              </td>
               <td className="py-4 px-6 font-medium whitespace-nowrap hover:text-white">
-                <button className="btn-primary !bg-danger">Delete</button>
+                <button className="btn-primary !bg-success">Next Stage</button>
               </td>
             </tr>
           </tbody>
