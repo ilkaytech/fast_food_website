@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Account from "../../components/profile/Account";
 import Password from "../../components/profile/Password";
+import Order from "../../components/profile/Order";
 
 const Profile = () => {
   const [tabs, setTabs] = useState(0);
@@ -9,7 +10,7 @@ const Profile = () => {
   return (
     <div
       className="flex px-10 min-h-[calc(100vh_-_433px)]
-    lg:flex-row flex-col"
+    lg:flex-row flex-col lg:mb-0 mb-10"
     >
       <div className="lg:w-80 w-100 flex-shrink-0">
         <div
