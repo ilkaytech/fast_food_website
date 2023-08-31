@@ -2,8 +2,8 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Account from "../../components/profile/Account";
 import Password from "../../components/profile/Password";
-
 import Products from "../../components/admin/Products";
+import Order from "../../components/admin/Order";
 
 const Profile = () => {
   const [tabs, setTabs] = useState(0);
@@ -55,7 +55,7 @@ const Profile = () => {
             } `}
             onClick={() => setTabs(2)}
           >
-            <i class="fas fa-key"></i>
+            <i class="fa fa-ellipsis-h"></i>
             <button className="ml-2">Categories</button>
           </li>
           <li
@@ -65,7 +65,7 @@ const Profile = () => {
             } `}
             onClick={() => setTabs(3)}
           >
-            <i class="fas fa-key"></i>
+            <i class="fas fa-pager"></i>
             <button className="ml-2">Footer</button>
           </li>
           <li
@@ -75,13 +75,13 @@ const Profile = () => {
             } `}
             onClick={() => setTabs(4)}
           >
-            <i class="fas fa-sign-out-alt"></i>
+            <i class="fas fa-running"></i>
             <button className="ml-2">Exit</button>
           </li>
         </ul>
       </div>
       {tabs === 0 && <Products />}
-      {tabs === 1 && <Password />}
+      {tabs === 1 && <Order />}
     </div>
   );
 };
