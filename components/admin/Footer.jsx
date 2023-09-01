@@ -13,12 +13,12 @@ const Footer = () => {
   const { values, errors, touched, handleSubmit, handleChange, handleBlur } =
     useFormik({
       initialValues: {
-        fullName: "",
-        phoneNumber: "",
+        location: "",
         email: "",
-        address: "",
-        job: "",
-        bio: "",
+        phoneNumber: "",
+        desc: "",
+        day: "",
+        time: "",
       },
       onSubmit,
       validationSchema: profileSchema,
