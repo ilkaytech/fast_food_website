@@ -2,7 +2,7 @@ import React from "react";
 import Input from "../form/Input";
 import Title from "../ui/Title";
 import { useFormik } from "formik";
-import { profileSchema } from "../../schema/profile";
+import { footerSchema } from "../../schema/footer";
 
 const Footer = () => {
   const onSubmit = async (values, actions) => {
@@ -21,30 +21,21 @@ const Footer = () => {
         time: "",
       },
       onSubmit,
-      validationSchema: profileSchema,
+      validationSchema: footerSchema,
     });
 
   const inputs = [
     {
       id: 1,
-      name: "fullName",
+      name: "location",
       type: "text",
-      placeholder: "Your Full Name",
-      value: values.fullName,
-      errorMessage: errors.fullName,
-      touched: touched.fullName,
+      placeholder: "Your Location",
+      value: values.location,
+      errorMessage: errors.location,
+      touched: touched.location,
     },
     {
       id: 2,
-      name: "phoneNumber",
-      type: "number",
-      placeholder: "Your Phone Number",
-      value: values.phoneNumber,
-      errorMessage: errors.phoneNumber,
-      touched: touched.phoneNumber,
-    },
-    {
-      id: 3,
       name: "email",
       type: "email",
       placeholder: "Your Email Address",
@@ -53,31 +44,40 @@ const Footer = () => {
       touched: touched.email,
     },
     {
+      id: 3,
+      name: "phoneNumber",
+      type: "number",
+      placeholder: "Your Phone Number",
+      value: values.phoneNumber,
+      errorMessage: errors.phoneNumber,
+      touched: touched.phoneNumber,
+    },
+    {
       id: 4,
-      name: "address",
+      name: "desc",
       type: "text",
-      placeholder: "Your Address",
-      value: values.address,
-      errorMessage: errors.address,
-      touched: touched.address,
+      placeholder: "Your Description",
+      value: values.desc,
+      errorMessage: errors.desc,
+      touched: touched.desc,
     },
     {
       id: 5,
-      name: "job",
+      name: "day",
       type: "text",
-      placeholder: "Your Job",
-      value: values.job,
-      errorMessage: errors.job,
-      touched: touched.job,
+      placeholder: "Update Day",
+      value: values.day,
+      errorMessage: errors.day,
+      touched: touched.day,
     },
     {
       id: 6,
-      name: "bio",
+      name: "time",
       type: "text",
-      placeholder: "Your Bio",
-      value: values.bio,
-      errorMessage: errors.bio,
-      touched: touched.bio,
+      placeholder: "Update Time",
+      value: values.time,
+      errorMessage: errors.time,
+      touched: touched.time,
     },
   ];
 
