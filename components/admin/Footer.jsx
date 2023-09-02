@@ -101,11 +101,25 @@ const Footer = () => {
         <div className="flex items-center gap-4">
           <Input placeholder="Link Address" value="https://" />
           <Input placeholder="Icon Name" value="fa-fa" />
-          <button className="btn-primary">Add</button>
+          <button className="btn-primary" type="button">
+            Add
+          </button>
         </div>
-        <ul>
+        <ul className="flex items-center gap-4">
           <li>
             <i className="fab fa-facebook text-2xl"></i>
+            <button className="text-danger">
+              <i className="fa fa-trash text-xl"></i>
+            </button>
+          </li>
+          <li>
+            <i className="fab fa-twitter text-2xl"></i>
+            <button className="text-danger">
+              <i className="fa fa-trash text-xl"></i>
+            </button>
+          </li>
+          <li>
+            <i className="fab fa-instagram text-2xl"></i>
             <button className="text-danger">
               <i className="fa fa-trash text-xl"></i>
             </button>
