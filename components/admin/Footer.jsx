@@ -94,6 +94,12 @@ const Footer = () => {
           />
         ))}
       </div>
+      <div>
+        <div className="flex gap-4">
+          <Input />
+          <Input />
+        </div>
+      </div>
       <button className="btn-primary mt-4">Update</button>
     </form>
   );
