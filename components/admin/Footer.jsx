@@ -99,6 +99,14 @@ const Footer = () => {
           <Input />
           <Input />
         </div>
+        <ul>
+          <li>
+            <i></i>
+            <button>
+              <i className="fa fa-delete"></i>
+            </button>
+          </li>
+        </ul>
       </div>
       <button className="btn-primary mt-4">Update</button>
     </form>
