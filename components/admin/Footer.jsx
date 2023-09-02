@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Input from "../form/Input";
 import Title from "../ui/Title";
 import { useFormik } from "formik";
 import { footerSchema } from "../../schema/footer";
 
 const Footer = () => {
+  const [linkAddress, setLinkAddress] = useState("");
+  const [iconName, setIconName] = useState("");
+
   const onSubmit = async (values, actions) => {
     await new Promise((revolse) => setTimeout(revolse, 4000));
     actions.resetForm();
@@ -94,16 +97,17 @@ const Footer = () => {
           />
         ))}
       </div>
-      <div>
-        <div className="flex gap-4">
-          <Input />
-          <Input />
+      <div className="mt-4 flex justify-between items-center">
+        <div className="flex items-center gap-4">
+          <Input placeholder="Link Address" value="https://" />
+          <Input placeholder="Icon Name" value="fa-fa" />
+          <button className="btn-primary">Add</button>
         </div>
         <ul>
           <li>
-            <i></i>
-            <button>
-              <i className="fa fa-delete"></i>
+            <i className="fab fa-facebook text-2xl"></i>
+            <button className="text-danger">
+              <i className="fa fa-trash text-xl"></i>
             </button>
           </li>
         </ul>
