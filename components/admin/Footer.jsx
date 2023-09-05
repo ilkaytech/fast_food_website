@@ -130,6 +130,12 @@ const Footer = () => {
               <i className="fa fa-trash text-xl"></i>
             </button>
           </li>
+          <li>
+            <i className="fab fa-github text-2xl"></i>
+            <button className="text-danger">
+              <i className="fa fa-trash text-xl"></i>
+            </button>
+          </li>
         </ul>
       </div>
       <button className="btn-primary mt-4">Update</button>
