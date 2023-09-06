@@ -4,9 +4,10 @@ import Link from "next/link";
 const Logo = () => {
   return (
     <Link href="/">
-      <span className="text-[2rem] font-dancing font-bold cursor-pointer ">
+      <img src="./images/dd.png" alt="" className="w-32 h-66 " />
+      {/* <span className="text-[2rem] font-dancing font-bold cursor-pointer ">
         Feane
-      </span>
+      </span> */}
     </Link>
   );
 };
