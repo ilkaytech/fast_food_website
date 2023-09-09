@@ -45,6 +45,7 @@ const Index = () => {
       setExtras([...extras, item]);
     } else {
       changePrice(-item.price);
+      setExtras(extras.filter((extra) => extra.id !== item.id));
     }
   };
 
