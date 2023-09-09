@@ -24,12 +24,28 @@ const Index = () => {
   const [prices, setPrices] = useState([10, 20, 30]);
   const [price, setPrice] = useState(prices[0]);
   const [size, setSize] = useState(0);
-  const [exstraItems, setExstraItems] = useState(itemsExtra);
+  const [extraItems, setExtraItems] = useState(itemsExtra);
+  const [extras, setExtras] = useState([]);
 
   const handleSize = (sizeIndex) => {
     const difference = prices[sizeIndex] - prices[size];
     setSize(sizeIndex);
     changePrice(difference);
+  };
+
+  const changePrice = (number) => {
+    setPrice(price + number);
+  };
+
+  const handleChange = (e, item) => {
+    const checked = e.target.checked;
+
+    if (checked) {
+      changePrice(item.price);
+      setExtras([...extras, item]);
+    } else {
+      changePrice(-item.price);
+    }
   };
 
   return (
@@ -100,9 +116,13 @@ const Index = () => {
           </div>
         </div>
         <div className="flex gap-x-4 my-6 md:justify-start justify-center">
-          {exstraItems.map((item) => (
+          {extraItems.map((item) => (
             <label className="flex items-center gap-x-1" key={item.id}>
-              <input type="checkbox" className="w-5 h-5 accent-primary" />
+              <input
+                type="checkbox"
+                className="w-5 h-5 accent-primary"
+                onChange={(e) => handleChange(e, item)}
+              />
               <span className="text-sm font-semibold">{item.name}</span>
             </label>
           ))}
