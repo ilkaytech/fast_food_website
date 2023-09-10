@@ -16,7 +16,7 @@ const CampaignsItem = () => {
           src="/images/bg3.jpg"
           alt=""
           layout="fill"
-          className="hover:scale-105 transition-all "
+          className="hover:scale-105 transition-all"
           objectFit="cover"
         />
       </div>
