@@ -5,7 +5,7 @@ const handler = async (req, res) => {
   await dbConnect();
   const { method } = req;
 
-  if (methot === "GET") {
+  if (method === "GET") {
     try {
       const users = await User.find();
       res.status(200).json(users);
