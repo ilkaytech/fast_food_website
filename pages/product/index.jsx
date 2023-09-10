@@ -45,6 +45,7 @@ const Index = () => {
   const [extraItems, setExtraItems] = useState(itemsExtra);
   const [extras, setExtras] = useState([]);
   const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
 
   const handleSize = (sizeIndex) => {
     const difference = prices[sizeIndex] - prices[size];
@@ -66,6 +67,10 @@ const Index = () => {
       changePrice(-item.price);
       setExtras(extras.filter((extra) => extra.id !== item.id));
     }
+  };
+
+  const handleClick = () => {
+    dispatch(addProduct({ ...foodItems[0], extras, price, quantity: 1 }));
   };
 
   console.log(cart);
@@ -149,7 +154,9 @@ const Index = () => {
             </label>
           ))}
         </div>
-        <button className="btn-primary mt-4">Add to Cart</button>
+        <button className="btn-primary mt-4" onClick={handleClick}>
+          Add to Cart
+        </button>
       </div>
     </div>
   );
