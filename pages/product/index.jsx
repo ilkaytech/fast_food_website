@@ -7,17 +7,17 @@ import { useDispatch, useSelector } from "react-redux";
 const itemsExtra = [
   {
     id: 1,
-    name: "extra 1",
+    name: "Ketchup",
     price: 1,
   },
   {
     id: 2,
-    name: "extra 2",
+    name: "Mayonnaise",
     price: 2,
   },
   {
     id: 3,
-    name: "extra 3",
+    name: "Hot Sauce",
     price: 3,
   },
 ];
@@ -31,7 +31,7 @@ const foodItems = [
     extraOptions: [
       {
         id: 1,
-        name: "Extra 1",
+        name: "Ketchup",
         price: 1,
       },
     ],
